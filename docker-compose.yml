@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  front:
+    build: ./front/src
+    volumes:
+      - ./front/src/app:/usr/src/app
+    command: ash -c "cd app && yarn start"
+    ports:
+      - "3000:3000"
